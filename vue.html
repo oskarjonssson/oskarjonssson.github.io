@@ -1,0 +1,132 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Oskar.</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fugaz+One" rel="stylesheet">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="main.css">
+
+
+
+
+	<script>
+	window.addEventListener('load', () => {
+		new Vue({
+	  el: '#root',
+	  data: {
+	    value: '',
+	    message: '0',
+	    equation: '',
+	    cal: '',
+			seen: "false"
+	  },
+	  methods: {
+			scrollAbout: function(){
+				document.getElementById("about").scrollIntoView({ behavior: 'smooth' });
+			},
+			scrollHome: function(){
+				document.getElementById("home").scrollIntoView({ behavior: 'smooth' });
+			},
+			scrollWork: function(){
+				document.getElementById("work").scrollIntoView({ behavior: 'smooth' });
+			},
+	  }
+	}) // End of methods
+
+	});  // window load
+	</script>
+</head>
+
+<body>
+
+	<div id="root">
+		<!-- NAV -->
+		<div id="nav">
+				<div id="navContainer">
+					<div v-on:click="scrollHome" class="name"><h3>Oskar<span>.</span></h3></div>
+					<div class="navOpt">
+
+						<p v-on:click="scrollAbout">About</p>
+						<p v-on:click="scrollWork">Work</p>
+
+					</div>
+				</div>
+		</div>
+		<!-- HOME PAGE -->
+		<div id="home">
+			<h1>Hi! I'm Oskar.<br> A front-end developer student<br> from Gothenburg, Sweden.<br> Read more <span v-on:click="scrollAbout">here.</span></h1>
+		</div>
+		<!-- ABOUT PAGE -->
+		<div id="about">
+			<h2>About Me</h2>
+			<div id="containerAboutText">
+				<p id="aboutText">My name is Oskar and I'm currently studying to become a Frontend Developer at EC Utbildning in Gothenburg.<br>
+					I have a big passion for both design and technology which is why I find Frontend development so exciting.
+					 My future goal is to progress into a Fullstack Developer.</p>
+				<p id="textSkills"><span id="headSpan">Some of the skills I've acquired until now are:</span><br><b>HTML5</b> / <b>CSS3</b> / <b>JavaScript ES6</b><span id="spanText"> Vue.js - React.js <b> / </b> </span><b>Firebase</b></p>
+			</div>
+			<h2>Get in touch</h2>
+			<div id="contactText">
+				<p>Write me an <a href="#">email</a><br>Call me on my <a href="#">phone</a><br>Find me on <a href="#">Github</a> or <a href="#">Linkedin</a></p>
+			</div>
+		<!--	<div id="iconSkills">
+				<div id="containerIcon">
+					<i class="fab fa-html5"  id="iconSkill"></i>
+					<i class="fab fa-css3-alt" id="iconSkill"></i>
+					<i class="fab fa-js-square"  id="iconSkill"></i>
+					<i class="fab fa-vuejs"  id="iconSkill"></i>
+					<i class="fab fa-react"  id="iconSkill"></i>
+				</div>
+			</div>-->
+		</div>
+		<!-- WORK PAGE -->
+		<div id="work">
+				<h2 id="workText">Work</h2>
+			<div id="containerWork">
+				<div class="bigWork">
+					<h2>Runaway</h2>
+					<div class="overlay">
+							<div class="text">Runaway was a school project made to exercise group work (Scrum), firebase and building large projects.<br> <a href="https://jackpotdante.github.io/Runaway-App">Visit the project</a></div>
+					</div>
+				</div>
+				<div class="smallWork" id="calc">
+					<h2 id="calcText">CALCULATOR</h2>
+					<p>Made with Vue.js</p>
+						<div class="overlay">
+								<div class="text">This was a school project made to exercise the basics of Vue.js. (In progress) <br> <a href="#">Visit the project</a></div>
+						</div>
+				</div>
+				<div class="smallWork">
+					<h2 id="movieApp">MOVIE APPLICATION</h2>
+						<div class="overlay">
+							<div class="text">This was a school project made to exercise firebase, pagination and sort/filter data.<br> <a href="https://oskarjonssson.github.io/MovieApplication">Visit the project</a></div>
+						</div>
+				</div>
+			</div>
+		</div>
+		<!-- CONTACT -->
+		<!--<div id="contact">
+			<h2>Get in touch</h2>
+			<form id="contactForm" action="mailto:oskarj97@hotmail.com?Subject=Hello%20again" method="post" enctype="text/plain">
+				<input placeholder="Name" class="nameEmail"/>
+				<input placeholder="Email" class="nameEmail"/>
+				<input id="subject" placeholder="Subject" class="subject"/>
+				<textarea placeholder="Message" id="textMessage"></textarea>
+				<button>Send message</button>
+			</form>
+			<div id="footer">
+				<p><i class="fas fa-map-marker-alt" style="margin-right: 5px; color: #d7b065;"></i>Gothenburg, Sweden</p>
+				<p><i class="far fa-envelope" style="margin-right: 5px; color: #d7b065;"></i>oskareajonsson@gmail.com</p>
+				<p><i class="fas fa-mobile-alt" style="margin-right: 5px; color: #d7b065;"></i>0766263831</p>
+			</div>
+		</div>-->
+	</div> <!-- END OF ROOT-->
+
+</body>
+</html>
